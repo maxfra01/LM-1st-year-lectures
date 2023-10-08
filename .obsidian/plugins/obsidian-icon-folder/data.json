@@ -1,0 +1,29 @@
+{
+  "settings": {
+    "migrated": 2,
+    "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
+    "fontSize": 16,
+    "emojiStyle": "none",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "LiNetwork",
+      "TiCircuitAmmeter",
+      "TiMobiledata",
+      "TiNetwork",
+      "FabDatabase"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false
+  },
+  "Data Science e tecnologie per le basi dati": "FabDatabase",
+  "Tecnologie e servizi di rete": "LiNetwork",
+  "Big data processing and analytics": "TiMobiledata",
+  "Architetture dei sistemi di elaborazione": "TiCircuitAmmeter"
+}
