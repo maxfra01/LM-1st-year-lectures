@@ -1,6 +1,7 @@
 # Definizioni introduttive
 
 ### Parallelismo
+
 Si parla di **DATA LEVEL PARALLELISM** e **TASK LEVEL PARALLELISM**, rispettivamente DLT e TLP.
 Esiste anche **INSTRUCTION LEVEL PARALLELISM** (ILP) che risiede più a livello hardware ed è legato al concetto di **pipeline**.
 

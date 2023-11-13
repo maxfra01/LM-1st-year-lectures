@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "761251cb3cbbc293",
+        "id": "e1f5cc8461a4715a",
         "type": "tabs",
         "children": [
           {
-            "id": "a5c10fdc5eb20d81",
+            "id": "d49c06f9e40b4d5b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Science e tecnologie per le basi dati/Data Warehouse.md",
+                "file": "Tecnologie e servizi di rete/LAN.md",
                 "mode": "source",
                 "source": false
               }
@@ -38,7 +38,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byCreatedTimeReverse"
+                "sortOrder": "byModifiedTime"
               }
             }
           },
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Science e tecnologie per le basi dati/Data Warehouse.md",
+                "file": "Tecnologie e servizi di rete/LAN.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Science e tecnologie per le basi dati/Data Warehouse.md",
+                "file": "Tecnologie e servizi di rete/LAN.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Science e tecnologie per le basi dati/Data Warehouse.md"
+                "file": "Tecnologie e servizi di rete/LAN.md"
               }
             }
           },
@@ -138,7 +138,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -156,32 +156,53 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a5c10fdc5eb20d81",
+  "active": "d49c06f9e40b4d5b",
   "lastOpenFiles": [
-    "Data Science e tecnologie per le basi dati/Data Warehouse.md",
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231006212107.png",
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231006204850.png",
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231006204016.png",
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231006203829.png",
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231006203613.png",
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231005121240.png",
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231005120305.png",
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231005115906.png",
-    "Data Science e tecnologie per le basi dati/Data Science Intro.md",
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231005104005.png",
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231005103623.png",
-    "Data Science e tecnologie per le basi dati/attachments",
-    "Big data processing and analytics/Big Data.md",
-    "Big data processing and analytics/Hadoop.md",
-    "Architetture dei sistemi di elaborazione/Introduzione.md",
-    "Architetture dei sistemi di elaborazione/Instruction set.md",
-    "Architetture dei sistemi di elaborazione/attachments",
-    "Big data processing and analytics/attachments",
-    "Pasted image 20231002172024.png.md",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20231113152018.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20231113151320.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20231113150342.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20231113145819.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20231113140651.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20231113134237.png",
+    "Tecnologie e servizi di rete/LAN.md",
+    "Architetture dei sistemi di elaborazione/Multiple-issue processors.md",
+    "Architetture dei sistemi di elaborazione/attachments/Pasted image 20231113114247.png",
+    "Architetture dei sistemi di elaborazione/attachments/Pasted image 20231113113806.png",
+    "Architetture dei sistemi di elaborazione/Speculation.md",
+    "Big data processing and analytics/Spark/RDD-based programming.md",
+    "Architetture dei sistemi di elaborazione/Dynamic Scheduling Technique.md",
+    "Architetture dei sistemi di elaborazione/attachments/Pasted image 20231113102834.png",
+    "Data Science e tecnologie per le basi dati/Classificazione.md",
+    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231110145809.png",
+    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231110145700.png",
+    "Big data processing and analytics/Hadoop/Hadoop.md",
+    "Data Science e tecnologie per le basi dati/Data Mining.md",
+    "Data Science e tecnologie per le basi dati/Regole di associazione.md",
+    "Big data processing and analytics/Spark/attachments",
+    "Big data processing and analytics/Spark",
+    "Big data processing and analytics/Note.md",
+    "Big data processing and analytics/Spark/Spark.md",
+    "Big data processing and analytics/Hadoop",
     "README.md",
-    "Architetture dei sistemi di elaborazione",
-    "Big data processing and analytics",
-    "Tecnologie e servizi di rete",
-    "Data Science e tecnologie per le basi dati"
+    "Big data processing and analytics/Hadoop/Design patterns.md",
+    "Big data processing and analytics/Big Data.md",
+    "Tecnologie e servizi di rete/Reti wireless e cellulari.md",
+    "Architetture dei sistemi di elaborazione/Branch Prediction Techniques.md",
+    "Data Science e tecnologie per le basi dati/Esercizi/Esercizio viste materializzate + trigger.md",
+    "Data Science e tecnologie per le basi dati/Esercizi/attachments/Viste-Materializzate-e-trigger_Testo.pdf",
+    "Data Science e tecnologie per le basi dati/Esercizi/Eccellenze Made in Italy.pdf",
+    "Data Science e tecnologie per le basi dati/Esercizi/Eccellenze Made in Italy.md",
+    "Data Science e tecnologie per le basi dati/Esercizi/Ditta Elettrodomestici.md",
+    "Big data processing and analytics/Hadoop/Relational algebra.md",
+    "Architetture dei sistemi di elaborazione/Instruction level parallelism.md",
+    "Architetture dei sistemi di elaborazione/Memorie Cache.md",
+    "Data Science e tecnologie per le basi dati/Esercizi/attachments",
+    "Highlights for DSTBD_DW_Eccellenze-MadeInItaly-IT.md",
+    "Data Science e tecnologie per le basi dati/Esercizi",
+    "Untitled.md",
+    "Tecnologie e servizi di rete/IPv6.md",
+    "Tecnologie e servizi di rete/attachments",
+    "Data Science e tecnologie per le basi dati/attachments",
+    "Architetture dei sistemi di elaborazione/attachments"
   ]
 }

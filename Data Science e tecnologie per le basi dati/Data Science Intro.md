@@ -7,6 +7,8 @@ I dati sono generati ad esempio da social network o e-commerce online, e tramite
 
 ### Knowledge Discovery from data
 
+^fb090c
+
 ![[Pasted image 20231005102137.png]]
 
 I dati grezzi non sono pronti per essere elaborati, vanno prima selezionati, pre processati, se necessario applicare trasformazioni per ottenere dei modelli **(pattern)** su cui applicare gli algoritmi d'interesse.
@@ -34,4 +36,3 @@ I soli algoritmi di clustering non specifica il perchè si raggruppino certi dat
 ![[Pasted image 20231005104005.png]]
 
 Altre tecniche sono: **sequence mining** (usato per identificare l'ordine sui dati analizzati, ad esempio l'ordine delle basi azotate del DNA), **Time series and geospatial data** (analizzano serie temporali di dati temporali e geografici), **Regressione** (ovvero la previsione di un valore continuo, come l'andamento di una valuta) e infine la **ricerca di outliers** (ad esempio per verificare traffico anomalo su una rete).
-

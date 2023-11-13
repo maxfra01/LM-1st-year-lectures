@@ -2,15 +2,15 @@
   "settings": {
     "migrated": 2,
     "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
-    "fontSize": 16,
+    "fontSize": 19,
     "emojiStyle": "none",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "RiPencilRuler2Line",
       "LiNetwork",
       "TiCircuitAmmeter",
       "TiMobiledata",
-      "TiNetwork",
-      "FabDatabase"
+      "TiNetwork"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -25,5 +25,6 @@
   "Data Science e tecnologie per le basi dati": "FabDatabase",
   "Tecnologie e servizi di rete": "LiNetwork",
   "Big data processing and analytics": "TiMobiledata",
-  "Architetture dei sistemi di elaborazione": "TiCircuitAmmeter"
+  "Architetture dei sistemi di elaborazione": "TiCircuitAmmeter",
+  "Data Science e tecnologie per le basi dati/Esercizi": "RiPencilRuler2Line"
 }
