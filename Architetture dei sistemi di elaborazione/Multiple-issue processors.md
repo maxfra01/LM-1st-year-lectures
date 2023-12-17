@@ -31,3 +31,4 @@ Per rendere l'implementazione più semplice le istruzione non vengono mai mandat
 
 E' possibile **duplicare il Common Data Bus** per migliorare le performance, andando però ad aumentare la dimensione dell'architettura.
 
+[[Speculation]]

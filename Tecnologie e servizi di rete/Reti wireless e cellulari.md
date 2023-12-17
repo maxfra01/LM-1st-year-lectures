@@ -309,3 +309,6 @@ L’**handover** attraverso le base station all’interno della stessa rete cell
 5. Il target Bs informa MME che del nuovo BS per il dispositivo (MME istruisce S‑GW di cambiare l’endpoint del tunnel al nuovo BS)
 6. La base station target inoltra un ack alla base station sorgente informando che l’handover è completato e la bs sorgente può rilasciare le sue risorse.
 7. I datagrammi del dispositivo possono ora utilizzare il nuovo tunnel dal target BS al S‑GW
+
+[[Ipv4]]
+[[LAN]]

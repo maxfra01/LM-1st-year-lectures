@@ -181,7 +181,7 @@ La seguente tecnica è **lo schema a stella.
 
 Per **ogni fatto ci sarà una tabella**:
 - le misure diventano attributi
-- le chiavi sono tutte le dimensione del fatto
+- le dimensioni del fatto diventano chiavi
 
 Per **ogni dimensione ci sarà una tabella**:
 - la chiave primaria è detta surrogata (generata artificialmente)
@@ -401,3 +401,7 @@ Dopo questa fase c'è il **caricamento** che prevede di aggiornare **in ordine**
 ![[Pasted image 20231013094442.png]]
 
 ![[Pasted image 20231013094525.png]]
+
+[[Esercizio viste materializzate + trigger]]
+[[Ditta Elettrodomestici]]
+[[Eccellenze Made in Italy]]

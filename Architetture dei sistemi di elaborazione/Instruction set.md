@@ -111,3 +111,4 @@ Un designer per aiutare il compilatore può:
 Alcune raccomandazioni sono: avere almeno 16 registri, semplicità delle operazioni e ortogonalità delle operazioni.
 
 [[MIPS]]
+[[ARM]]

@@ -90,7 +90,7 @@ L'algoritmo è definito dallo standard 802.1D: si identificano i nodi e la **ret
 
 # Router
 
-Sono dispositivi al livello 3 che connettono diverse reti e servono per interfacciarsi a internet.
+Sono dispositivi al livello 3 che connettono diverse reti e servono per interfacciarsi a internet. Funzionano col protocollo [[Ipv4]] oppure [[IPv6]]
 Non sono dispositivi trasparenti: **separano i domini di broadcast**.
 
 ![[Pasted image 20231113152018.png]]
@@ -105,3 +105,66 @@ Per la sicurezza si pensi al MAC flooding attack, mentre per le performance si p
 
 # VLAN
 
+Le **Virtual LANs** consentono a un certo insieme di porte di uno switch di simulare di far parte di domini di broadcast separati, nonostante facciano parte della stesse rete fisica.
+Per consentire la comunicazione fra le VLAN è necessario un router (se le sottoreti sono collegate a un'unica interfaccia allora si parla di **one arm router**).
+
+```ad-danger
+title: Frame L2 fra VLAN 
+Le trame di livello L2 non possono attraversare le VLAN, in quanto i domini sono separati.
+
+```
+
+![[Pasted image 20231115162111.png]]
+
+Quando un pacchetto attraversa il router si modifica la trama, mettendo come destinazione (ipotizzo H1 -> H2) il MAC di H2.
+Il **broadcast non può attraversa i confini delle VLAN**, inoltre anche **ARP non può intervenire**, infine dispositivi connessi a VLAN diverse devono avere un indirizzo IP di rete differente.
+
+### Associare i frame alle VLAN
+
+Il problema che si genera è quello di identificare da quale VLAN un frame provenga: quando uno switch riceve un frame può segnarsi da quale VLAN proviene, ma non si altera la trama l'informazione è memorizzata solo in uno switch e non in tutti.
+Si introduce perciò il campo **tagging** di 4 byte che contiene il **VLAN-ID** 
+
+![[Pasted image 20231115162933.png]]
+
+Dobbiamo perciò effettuare piccole modifiche, come estendere la lunghezza della trama di 4 byte.
+
+Le **porte** si dividono in:
+- **Access port**: ricevono e trasmettono frame **untagged**, spesso è la configurazione standard su host, switch e inoltre si usano spesso per connettere gli end system alla rete.
+  Queste informazioni **non vengono propagate** al di fuori dello switch considerato  
+  ![[Pasted image 20231115175804.png]]
+
+- **Trunk port**: trasmettono e ricevono i frame **tagged**, devono essere configurate esplicitamente e sono spesso usate per connettere due switch.
+  ![[Pasted image 20231115163958.png]]
+
+### Assegnare gli host alle VLAN
+
+Un importante problema è la **mobilità degli host**, che possono cambiare luogo d'accesso. Per mantenere un mapping costante posso **associare il MAC address** per farmi riconoscere sempre: questo richiede una struttura dati che tenga in memoria i mapping (MAC address, VLAN-id) e ogni volta che un host si connette allo switch, quest'ultimo deve fare il controllo.
+
+Un secondo modo è il **per-user assignment** dove per connettersi alla rete occorre **autenticarsi** con username e password, e dunque potrò accedere alle VLAN corrette.
+
+Un terzo ed ultimo tentativo è quello del **cooperative assignment**, dove è l'host stesso a 'taggare' la sua trama (comporta problemi di consistenze e di sicurezza).
+
+E' possibile che un host debba essere assegnato a più VLAN: sono dunque necessarie delle **trunks ports sul dispositivo stesso** (usando cooperative assignment); spesso questo scenario è per dispositivi particolari gestiti manualmente.
+
+### VLAN e Spanning tree
+
+In pratica le due tecnologie sono spesso indipendenti: quindi lo spanning tree abilita e disabilita certi link; successivamente sulla topologia ottenuta si costruiscono le VLAN.
+
+Spesso si usano soluzioni proprietarie: ci possono essere problemi di incompatibilità.
+
+### VLAN isolation
+
+Nonostante le trame non possano attraversare i bordi delle VLAN, i collegamenti fisici sono condivisi: ciò significa che comunque una broadcast storm affligge i canali condivisi della VLAN (Consuma risorse, un collegamento potrebbe risultare comunque congestionato e non poter trasmettere). Così come un guasto su un link di una VLAN affligge anche le altre.
+
+Per ovviare a ciò usiamo dei meccanismi di **QoS** (quality of service) per VLAN: un esempio di questo è il round robin, dove prima trasmette uno, poi l'altro, poi uno, l'altro...
+
+### Switch types in VLAN
+
+- **VLAN aware switch**: possono gestire frame tagged
+- **VLAN unaware switch**: non accettano frame tagged
+
+La maggior parte dei dispositivi domestici non hanno il supporto per le VLAN, quindi le VLAN non sono più tecnologie plug and play perchè in genere gli utenti non hanno le competenze per configurarle.
+
+Normalmente in aziende è molto comune combinare l'uso di aware e unaware VLAN switch.
+
+![[Pasted image 20231115182728.png]]

@@ -313,3 +313,45 @@ $$
 \text{accuracy} = \frac{a+d}{a+b+c+d} = \frac{TP+TN}{TP+TN+FP+FN}
 $$
 L'accuratezza però ha delle limitazioni (esempio su slide): va bene solamente per dataset in cui la distribuzione delle classi è **bilanciata**, e nei dataset dove le classi hanno la stessa importanza.
+
+### Class specific measures
+
+Definiamo il **recall**:
+$$
+\text{Recall(r)} = \frac{\text{Number of objects correctly assigned to class C}}{\text{Number of objects belonging to C}}
+$$
+e La precisione:
+$$
+\text{precision(p)} = \frac{\text{Number of object correctly assigned to C}}{\text{Number of objects assigned to C}}
+$$
+Per ottenere migliori performance occorre **massimizzare la quantità**:
+$$
+\text{Fmeasure(F)} = \frac{2rp}{r+p}
+$$
+Se invece pensiamo alla **classificazione binaria** ricadiamo nel caso della matrice di confusione e quindi **le quantità descritte dalla recall e precision si possono esprimere con $a,b,c,d$** ovvero FP, FN, TP, TN.
+
+### ROC (Received Operating Characteristic)
+
+E' una particolare curva che da informazioni sul trade off tra **positive hits** e **false alarms**.
+Definiamo il **true positive rate** e il **false positive rate**:
+$$
+\text{TPR}= \frac{TP}{FN+TP} \quad \quad FPR = \frac{FP}{FP+TN}
+$$
+Sulla base della curva costruita con questi due assi possiamo classificare un oggetto:
+
+![[Pasted image 20231115085023.png]]
+
+Nel caso descritto qui sopra avremo:
+- Nel punto $(0,0)$ sappiamo che sia FP che TP sono a 0, quindi per forza l'oggetto va nella classe negativa
+- Nel punto $(1,1)$ l'opposto, quindi l'oggetto appartiene alla classe positiva
+- Il caso ideale prevede una linea da $(0,0) \to (0,1) \to (1,1)$
+
+Come costruire la curva ROC?
+1. Consideriamo una classificazione binaria, ci serve dunque un classificatore che dia l'informazione $P(+|A)$. 
+2. Ordiniamo i record in ordine decrescente basandoci sulla misura ottenuta precedentemente.
+3. Si applica una soglia ad ogni $P(+|A)$
+4. Per ogni soglia calcoliamo TP,TN,FP,FN e successivamente TPR e FPR che **andranno a rappresentare i punti sul grafico**:
+
+![[Pasted image 20231115085544.png]]
+
+Per confrontare modelli possiamo **confrontare l'area sottesa dalla curva ROC**.
