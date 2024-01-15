@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "00d4249f9632cc0f",
+        "id": "6107b3cbc93e7e7d",
         "type": "tabs",
         "children": [
           {
-            "id": "e8e6b811e0c90948",
+            "id": "d0680e53f541b1f3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Science e tecnologie per le basi dati/NoSQL, MongoDB, Elastic.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.50152587890625,
-    "collapsed": true
+    "width": 241.50152587890625
   },
   "right": {
     "id": "3c49ceae74c9529c",
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Science e tecnologie per le basi dati/NoSQL, MongoDB, Elastic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Science e tecnologie per le basi dati/NoSQL, MongoDB, Elastic.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Data Science e tecnologie per le basi dati/NoSQL, MongoDB, Elastic.md"
-              }
+              "state": {}
             }
           },
           {
@@ -157,45 +148,44 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e8e6b811e0c90948",
+  "active": "d0680e53f541b1f3",
   "lastOpenFiles": [
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231214102750.png",
-    "Architetture dei sistemi di elaborazione/LandTiger.md",
-    "Data Science e tecnologie per le basi dati/NoSQL, MongoDB, Elastic.md",
-    "Data Science e tecnologie per le basi dati/DBMS distribuiti.md",
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231213094033.png",
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231213093842.png",
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231213085940.png",
-    "Data Science e tecnologie per le basi dati/attachments/Pasted image 20231213085537.png",
-    "Architetture dei sistemi di elaborazione/attachments/Pasted image 20231212093258.png",
-    "Architetture dei sistemi di elaborazione/attachments/Pasted image 20231212093101.png",
-    "Architetture dei sistemi di elaborazione/attachments/Pasted image 20231212092709.png",
-    "Big data processing and analytics/Spark/MLlib.md",
-    "Architetture dei sistemi di elaborazione/attachments/Pasted image 20231211122949.png",
-    "Architetture dei sistemi di elaborazione/ARM.md",
-    "Data Science e tecnologie per le basi dati/DBMS.md",
-    "Data Science e tecnologie per le basi dati/Progettazione fisica.md",
-    "Data Science e tecnologie per le basi dati/Esercizi/Es progettazione fisica.md",
-    "Data Science e tecnologie per le basi dati/Esercizi/Esercizi Cirquetelli.md",
-    "Tecnologie e servizi di rete/VPN.md",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20231208114851.png",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20231208114827.png",
-    "Tecnologie e servizi di rete/Reti ottiche.md",
-    "Big data processing and analytics/Spark/Spark SQL.md",
-    "Big data processing and analytics/Spark/Advanced topics.md",
-    "Data Science e tecnologie per le basi dati/Esercizi/Quaderno 2.md",
     "README.md",
-    "Data Science e tecnologie per le basi dati/Classificazione.md",
-    "Big data processing and analytics/Spark/RDD-based programming.md",
-    "Data Science e tecnologie per le basi dati/Data Mining.md",
-    "Tecnologie e servizi di rete/Network Softwarization.md",
-    "Tecnologie e servizi di rete/Routing.md",
-    "Data Science e tecnologie per le basi dati/Esercizi/attachments/attachments",
-    "Data Science e tecnologie per le basi dati/Clustering.md",
-    "Big data processing and analytics/Spark/Spark.md",
-    "Riunione Capodanno.md",
     "Tecnologie e servizi di rete/LAN.md",
-    "Data Science e tecnologie per le basi dati/Esercizi/Homework 1.md",
+    "Tecnologie e servizi di rete/Ipv4.md",
+    "Tecnologie e servizi di rete/IPv6.md",
+    "Tecnologie e servizi di rete/Network Softwarization.md",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240115180023.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240115175750.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240115174907.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240115161715.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240115161527.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240115160953.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240115154842.png",
+    "Untitled.md",
+    "Tecnologie e servizi di rete/QoS.md",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240111152808.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240111152236.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240111152219.png",
+    "Tecnologie e servizi di rete/CDN.md",
+    "Big data processing and analytics/Spark/Spark streaming.md",
+    "Big data processing and analytics/Hadoop/Design patterns.md",
+    "Tecnologie e servizi di rete/VPN.md",
+    "Data Science e tecnologie per le basi dati/Regole di associazione.md",
+    "Data Science e tecnologie per le basi dati/Data Mining.md",
+    "Data Science e tecnologie per le basi dati/Classificazione.md",
+    "Tecnologie e servizi di rete/Routing.md",
+    "Tecnologie e servizi di rete/MPLS.md",
+    "Tecnologie e servizi di rete/Reti wireless e cellulari.md",
+    "Big data processing and analytics/Spark/Advanced topics.md",
+    "Big data processing and analytics/Spark/RDD-based programming.md",
+    "Big data processing and analytics/Spark/Spark.md",
+    "Data Science e tecnologie per le basi dati/Clustering.md",
+    "Data Science e tecnologie per le basi dati/Data Lakes.md",
+    "Data Science e tecnologie per le basi dati/DBMS.md",
+    "Data Science e tecnologie per le basi dati/Esercizi/Quaderno4_Francios_Massimo_s328914.md",
+    "Data Science e tecnologie per le basi dati/NoSQL, MongoDB, Elastic.md",
+    "Data Science e tecnologie per le basi dati/Esercizi/attachments/attachments",
     "Data Science e tecnologie per le basi dati/Esercizi/Eccellenze Made in Italy.pdf",
     "Big data processing and analytics/Spark/attachments",
     "Big data processing and analytics/Spark",

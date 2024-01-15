@@ -91,7 +91,7 @@ Formalmente gli indirizzi unicast sono scelti sulla base di una gerarchia di ISP
 
 ![[Pasted image 20231018175800.png]]
 
-Altri tipi di indirizzi unicast sono gli **indirizzi privati**.
+Altri tipi di indirizzi unicast sono gli **indirizzi privati**: c'è altra probabilità che siano univoci, ma non possono essere utilizzati fuori dal link.
 ### Link Local / Site Local
 
 - **Link local**: `FE80::/64` sono indirizzi di autoconfigurazione che hanno validità solo sul link, ovvero sulla rete fisica. Genericamente si assegnato sulla base dell'indirizzo MAC della scheda di rete, a cui si aggiunge un prefisso.
