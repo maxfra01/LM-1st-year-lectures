@@ -40,6 +40,10 @@ JavaDStream<String> lines =
 jssc.textFileStream(inputFolder);
 ```
 
+### Windows
+
+It is possible to create **windows** with the `window()` method: we have to pass two parameters which are **window length** and **sliding interval**.
+
 ### Transformations and actions
 
 There are basic transformations such as `map()`, `flatMap()`, `filter`, `reduce()`, `reduceByKey()`, `countByValue()` ecc...

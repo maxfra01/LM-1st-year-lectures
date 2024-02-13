@@ -319,25 +319,54 @@ Se in un dispositivo sono presenti più interfacce caratterizzate dallo stesso p
 
 # Transizione v4 a v6
 
-Usiamo un approccio **dual-stack** per gli host che sono in grado di implementare IPv6 come un nuovo protocollo di livello 3.
-L'unico problema del dual stack è il fatto che non vada a ridurre l'uso di IPv4, infatti è scelta del dispositivo usare v4 o v6 per comunicare.
-I dispositivi v6 che vogliono comunicare con v4 possono farlo in maniera semplice, il contrario invece (v4 vuole comunicare a v6) è difficile, per la difficoltà nel mappare da v4 a v6.
-
-Il **Tunneling** è una tecnica che serve per far comunicare host IPv6 con i v4, tramite incapsulamento di un pacchetto IPv6 dentro uno IPv4.
-
-![[Pasted image 20231025162658.png]]
-
-I protocolli principali del tunnelling sono: GRE (Generic Routing Encapsulations) e IPv6 in IPv4. Per il setup del tunnelling ci sono delle strategie automatiche come il **6to4**.
+Inizialmente si è pensato di fare **tunnelling** tramite **GRE** oppure **IPv6 in IPv4**: prendo un pacchetto IPv6 e lo imbusto in uno IPv4: i pacchetti viaggiano sulla rete v4.
+Sempre inizialmente si pensava di fare **dual stack**: supportare sia v4 che v6, ma ciò comporta la sdoppiatura di tutto lo stack protocollare.
 
 ### 6to4
 
-![[Pasted image 20231025163830.png]]
+![[Pasted image 20240116202147.png]]
 
-Si va a costruire un indirizzo IPv6 particolare a partire dall'IPv4 dell'interfaccia del mio router:
+Questa è una soluzione di tipo **network centered**:
+- Si usa un indirizzo IPv6 particolare che embedda l'indirizzo IPv4 dell'interfaccia che mi consente di uscire dalla mia rete IPv6
+- Se voglio contattare una rete IPv6 conosco il suo IPv4 perchè posso ricavarmelo
+L'unico problema di questo approccio è il dover obbligatoriamente usare un indirizzo IPv6 dedicato 2002: ...
 
-![[Pasted image 20231025164032.png]]
+### Soluzioni carrier-grade, scalable
 
-### Altre soluzioni
+Normalmente ad oggi la maggior parte dei servizi in internet è raggiungibile sia in v4 che in v6 (dual stack): all'edge della rete vogliamo mantenere indirizzi privati, mentre nella rete dei provider si inizia ad usare IPv6.
+(vedere immagine sotto)
 
-![[Pasted image 20231025171146.png]]
+![[Pasted image 20240116203715.png]]
 
+Nella rete v6 del provider saranno presenti numerosi CPE (tanti clienti, tante aziende) ma il tunnel endpoint (per uscire su internet) è solamente uno (in realtà anche più di uno, ma non tantissimi)
+Infine è presente l' **Address Family transition router** (AFTR).
+
+### DS-Lite
+
+Questa soluzione è simile allo scenario descritto sopra.
+La soluzione adottata da DS‑Lite funziona come segue: da IPv4 privato si arriva sul home gateway (CPE) che effettua tunnel verso l’AFTR tramite una rete IPv6 su cui è installato un Large Scale NAT (LSN), in questo modo Un unico NAT gestisce tutti i clienti. 
+
+![[Pasted image 20240116204626.png]]
+
+- il cliente non ha controllo sul NAT.
+- possono esserci problemi con i server in quanto static mapping e port forwarding non possono essere configurati.
+
+### A + P
+
+La soluzione A+P parte da un indirizzo IPv4 privato che arriva sul CPE e viene convertito in indirizzo pubblico e solo successivamente viene effettuato il tunnel IPv6 verso l’AFTR. Quando il pacchetto esce dal tunnel è già stato trattato dal NAT e dunque può andare verso la rete pubblica.
+
+![[Pasted image 20240116204859.png]]
+
+- Il vantaggio di A+P risiede nella possibilità per il cliente di avere sotto controllo il NAT
+- nessun problema con la sovrapposizione degli indirizzi privati nello spazio di indirizzi dei customer
+
+### NAT64 + DNS64
+
+Il processo si divide nei seguenti passi:
+1. Un host IPv6 esegue una query DNS di tipo IPv6 AAAA.
+2. DNS64 inoltra la query dal DNS autoritativo verso il dominio della richiesta.
+3. Il DNS autoritativo (che si trova in una rete IPv4) non può ricevere la richiesta, per questo motivo viene ripetuta per un indirizzo IPv4 (necessaria rete IPv4+IPv6 intermedia).
+4. DNS64 riceve l’indirizzo IPv4 che risolve il dominio, ne esegue l’embedding in un indirizzo IPv6 con un prefix di default 64:FF9B.
+5. L’indirizzo IPv6 viene restituito al host che ha fatto la richiesta.
+
+![[Pasted image 20240116205340.png]]

@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "6107b3cbc93e7e7d",
+        "id": "2ce4cf673bbdf4fa",
         "type": "tabs",
         "children": [
           {
-            "id": "d0680e53f541b1f3",
+            "id": "84d78fc712432fb1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Tecnologie e servizi di rete/Reti wireless e cellulari.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Tecnologie e servizi di rete/Reti wireless e cellulari.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Tecnologie e servizi di rete/Reti wireless e cellulari.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Tecnologie e servizi di rete/Reti wireless e cellulari.md"
+              }
             }
           },
           {
@@ -148,52 +156,53 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d0680e53f541b1f3",
+  "active": "74a41a6eea1963f8",
   "lastOpenFiles": [
+    "Ingegneria del software",
+    "Programmazione di sistema",
+    "Machine learning and pattern recognition",
+    "Web Applications I",
+    "Tecnologie e servizi di rete/Reti wireless e cellulari.md",
+    "toPrint.md",
+    "Tecnologie e servizi di rete/VPN.md",
+    "Tecnologie e servizi di rete/Reti ottiche.md",
+    "Tecnologie e servizi di rete/Network Softwarization.md",
+    "Tecnologie e servizi di rete/CDN.md",
+    "Big data processing and analytics/Hadoop/Design patterns.md",
+    "Tecnologie e servizi di rete/MPLS.md",
+    "Big data processing and analytics/Spark/RDD-based programming.md",
+    "Tecnologie e servizi di rete/IPv6.md",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240116205340.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240116204859.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240116204626.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240116204607.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240116203715.png",
+    "Tecnologie e servizi di rete/attachments/Pasted image 20240116202147.png",
+    "Big data processing and analytics/Spark/Spark streaming.md",
     "README.md",
     "Tecnologie e servizi di rete/LAN.md",
     "Tecnologie e servizi di rete/Ipv4.md",
-    "Tecnologie e servizi di rete/IPv6.md",
-    "Tecnologie e servizi di rete/Network Softwarization.md",
     "Tecnologie e servizi di rete/attachments/Pasted image 20240115180023.png",
     "Tecnologie e servizi di rete/attachments/Pasted image 20240115175750.png",
     "Tecnologie e servizi di rete/attachments/Pasted image 20240115174907.png",
     "Tecnologie e servizi di rete/attachments/Pasted image 20240115161715.png",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240115161527.png",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240115160953.png",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240115154842.png",
-    "Untitled.md",
     "Tecnologie e servizi di rete/QoS.md",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240111152808.png",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240111152236.png",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240111152219.png",
-    "Tecnologie e servizi di rete/CDN.md",
-    "Big data processing and analytics/Spark/Spark streaming.md",
-    "Big data processing and analytics/Hadoop/Design patterns.md",
-    "Tecnologie e servizi di rete/VPN.md",
     "Data Science e tecnologie per le basi dati/Regole di associazione.md",
     "Data Science e tecnologie per le basi dati/Data Mining.md",
     "Data Science e tecnologie per le basi dati/Classificazione.md",
     "Tecnologie e servizi di rete/Routing.md",
-    "Tecnologie e servizi di rete/MPLS.md",
-    "Tecnologie e servizi di rete/Reti wireless e cellulari.md",
     "Big data processing and analytics/Spark/Advanced topics.md",
-    "Big data processing and analytics/Spark/RDD-based programming.md",
     "Big data processing and analytics/Spark/Spark.md",
     "Data Science e tecnologie per le basi dati/Clustering.md",
     "Data Science e tecnologie per le basi dati/Data Lakes.md",
     "Data Science e tecnologie per le basi dati/DBMS.md",
     "Data Science e tecnologie per le basi dati/Esercizi/Quaderno4_Francios_Massimo_s328914.md",
-    "Data Science e tecnologie per le basi dati/NoSQL, MongoDB, Elastic.md",
     "Data Science e tecnologie per le basi dati/Esercizi/attachments/attachments",
     "Data Science e tecnologie per le basi dati/Esercizi/Eccellenze Made in Italy.pdf",
     "Big data processing and analytics/Spark/attachments",
     "Big data processing and analytics/Spark",
     "Big data processing and analytics/Hadoop",
     "Data Science e tecnologie per le basi dati/Esercizi/attachments/Viste-Materializzate-e-trigger_Testo.pdf",
-    "Data Science e tecnologie per le basi dati/Esercizi/attachments",
-    "Data Science e tecnologie per le basi dati/Esercizi",
-    "Tecnologie e servizi di rete/attachments",
-    "Data Science e tecnologie per le basi dati/attachments"
+    "Data Science e tecnologie per le basi dati/Esercizi/attachments"
   ]
 }
