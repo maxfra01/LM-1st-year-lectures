@@ -22,13 +22,13 @@
     },
     "iconInTabsEnabled": false
   },
-  "Data Science e tecnologie per le basi dati": "FabDatabase",
-  "Tecnologie e servizi di rete": "LiNetwork",
-  "Big data processing and analytics": "TiMobiledata",
-  "Architetture dei sistemi di elaborazione": "TiCircuitAmmeter",
-  "Data Science e tecnologie per le basi dati/Esercizi": "RiPencilRuler2Line",
-  "Ingegneria del software": "RiExchangeFundsLine",
-  "Web Applications I": "TiWorldWww",
-  "Machine learning and pattern recognition": "FasBrain",
-  "Programmazione di sistema": "SiDwavesystems"
+  "I semester/Architetture dei sistemi di elaborazione": "TiCircuitAmmeter",
+  "I semester/Big data processing and analytics": "TiMobiledata",
+  "I semester/Data Science e tecnologie per le basi dati": "FabDatabase",
+  "I semester/Data Science e tecnologie per le basi dati/Esercizi": "RiPencilRuler2Line",
+  "I semester/Tecnologie e servizi di rete": "LiNetwork",
+  "II semester/Ingegneria del software": "RiExchangeFundsLine",
+  "II semester/Machine learning and pattern recognition": "FasBrain",
+  "II semester/Web Applications I": "TiWorldWww",
+  "II semester/Programmazione di sistema": "SiDwavesystems"
 }

@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "2ce4cf673bbdf4fa",
+        "id": "a09ee1e705111cee",
         "type": "tabs",
         "children": [
           {
-            "id": "84d78fc712432fb1",
+            "id": "772f71f2ef9618bc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tecnologie e servizi di rete/Reti wireless e cellulari.md",
+                "file": "II semester/Ingegneria del software/Requisiti.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2b3c7cc5aa1789aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "II semester/Machine learning and pattern recognition/Librerie Python.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -38,7 +51,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTime"
+                "sortOrder": "byModifiedTimeReverse"
               }
             }
           },
@@ -69,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.50152587890625
+    "width": 241.50152587890625,
+    "collapsed": true
   },
   "right": {
     "id": "3c49ceae74c9529c",
@@ -85,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tecnologie e servizi di rete/Reti wireless e cellulari.md",
+                "file": "II semester/Machine learning and pattern recognition/Librerie Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tecnologie e servizi di rete/Reti wireless e cellulari.md",
+                "file": "II semester/Machine learning and pattern recognition/Librerie Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tecnologie e servizi di rete/Reti wireless e cellulari.md"
+                "file": "II semester/Machine learning and pattern recognition/Librerie Python.md"
               }
             }
           },
@@ -156,53 +170,53 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "74a41a6eea1963f8",
+  "active": "2b3c7cc5aa1789aa",
   "lastOpenFiles": [
-    "Ingegneria del software",
-    "Programmazione di sistema",
-    "Machine learning and pattern recognition",
-    "Web Applications I",
-    "Tecnologie e servizi di rete/Reti wireless e cellulari.md",
-    "toPrint.md",
-    "Tecnologie e servizi di rete/VPN.md",
-    "Tecnologie e servizi di rete/Reti ottiche.md",
-    "Tecnologie e servizi di rete/Network Softwarization.md",
-    "Tecnologie e servizi di rete/CDN.md",
-    "Big data processing and analytics/Hadoop/Design patterns.md",
-    "Tecnologie e servizi di rete/MPLS.md",
-    "Big data processing and analytics/Spark/RDD-based programming.md",
-    "Tecnologie e servizi di rete/IPv6.md",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240116205340.png",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240116204859.png",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240116204626.png",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240116204607.png",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240116203715.png",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240116202147.png",
-    "Big data processing and analytics/Spark/Spark streaming.md",
+    "II semester/Ingegneria del software/Requisiti.md",
+    "II semester/Machine learning and pattern recognition/Librerie Python.md",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240309130207.png",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240309130149.png",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240309130138.png",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240309125908.png",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240309125610.png",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240309125127.png",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240308225547.png",
+    "II semester/Ingegneria del software/Processo software.md",
+    "II semester/Programmazione di sistema/Rust.md",
+    "II semester/Programmazione di sistema/Possesso.md",
+    "II semester/Programmazione di sistema/attachments/Pasted image 20240308111831.png",
+    "II semester/Programmazione di sistema/attachments/Pasted image 20240308110459.png",
+    "II semester/Programmazione di sistema/attachments/Pasted image 20240308105815.png",
+    "II semester/Web Applications I/Javascript.md",
+    "II semester/Ingegneria del software/attachments",
+    "II semester/Programmazione di sistema/Allocazione della memoria.md",
     "README.md",
-    "Tecnologie e servizi di rete/LAN.md",
-    "Tecnologie e servizi di rete/Ipv4.md",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240115180023.png",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240115175750.png",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240115174907.png",
-    "Tecnologie e servizi di rete/attachments/Pasted image 20240115161715.png",
-    "Tecnologie e servizi di rete/QoS.md",
-    "Data Science e tecnologie per le basi dati/Regole di associazione.md",
-    "Data Science e tecnologie per le basi dati/Data Mining.md",
-    "Data Science e tecnologie per le basi dati/Classificazione.md",
-    "Tecnologie e servizi di rete/Routing.md",
-    "Big data processing and analytics/Spark/Advanced topics.md",
-    "Big data processing and analytics/Spark/Spark.md",
-    "Data Science e tecnologie per le basi dati/Clustering.md",
-    "Data Science e tecnologie per le basi dati/Data Lakes.md",
-    "Data Science e tecnologie per le basi dati/DBMS.md",
-    "Data Science e tecnologie per le basi dati/Esercizi/Quaderno4_Francios_Massimo_s328914.md",
-    "Data Science e tecnologie per le basi dati/Esercizi/attachments/attachments",
-    "Data Science e tecnologie per le basi dati/Esercizi/Eccellenze Made in Italy.pdf",
-    "Big data processing and analytics/Spark/attachments",
-    "Big data processing and analytics/Spark",
-    "Big data processing and analytics/Hadoop",
-    "Data Science e tecnologie per le basi dati/Esercizi/attachments/Viste-Materializzate-e-trigger_Testo.pdf",
-    "Data Science e tecnologie per le basi dati/Esercizi/attachments"
+    "o.md",
+    "II semester/Web Applications I/attachments",
+    "II semester/Programmazione di sistema/attachments",
+    "II semester",
+    "I semester",
+    "II semester/Ingegneria del software",
+    "II semester/Programmazione di sistema",
+    "II semester/Machine learning and pattern recognition",
+    "II semester/Web Applications I",
+    "I semester/Tecnologie e servizi di rete/Reti wireless e cellulari.md",
+    "toPrint.md",
+    "I semester/Tecnologie e servizi di rete/VPN.md",
+    "I semester/Tecnologie e servizi di rete/Reti ottiche.md",
+    "I semester/Tecnologie e servizi di rete/Network Softwarization.md",
+    "I semester/Tecnologie e servizi di rete/CDN.md",
+    "I semester/Big data processing and analytics/Hadoop/Design patterns.md",
+    "I semester/Tecnologie e servizi di rete/MPLS.md",
+    "I semester/Big data processing and analytics/Spark/RDD-based programming.md",
+    "I semester/Tecnologie e servizi di rete/IPv6.md",
+    "I semester/Big data processing and analytics/Spark/Spark streaming.md",
+    "I semester/Tecnologie e servizi di rete/LAN.md",
+    "I semester/Tecnologie e servizi di rete/Ipv4.md",
+    "I semester/Tecnologie e servizi di rete/QoS.md",
+    "I semester/Data Science e tecnologie per le basi dati/Regole di associazione.md",
+    "I semester/Data Science e tecnologie per le basi dati/Data Mining.md",
+    "I semester/Data Science e tecnologie per le basi dati/Classificazione.md",
+    "I semester/Data Science e tecnologie per le basi dati/Esercizi/attachments/attachments"
   ]
 }
