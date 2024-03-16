@@ -61,7 +61,7 @@ Di fatto ciò che **non è testabile non è utile**.
 
 Nel caso di **conflitti tra requisiti RF**, gli stakeholders chiave devono prendere una decisione (ad esempio efficienza vs sicurezza): questa è una decisione aziendale perciò i programmatori non possono scegliere.
 
-E' importante definire anche i **requisiti di dominio** (in che ambito è posto il prodotto in uso) e definire un **glossario** per favorire la corretta comunicazione: in particolare per il glossario si può usare il linguaggio **UML**:
+E' importante definire anche i **requisiti di dominio** (in che ambito è posto il prodotto in uso) e definire un **glossario** per favorire la corretta comunicazione: in particolare per il glossario si può usare il linguaggio [[UML]]:
 
 ![[Pasted image 20240309125127.png]]
 
