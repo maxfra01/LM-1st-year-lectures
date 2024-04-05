@@ -9,5 +9,6 @@
     "margin": "0",
     "downscalePercent": 77
   },
-  "showIndentGuide": false
+  "showIndentGuide": false,
+  "alwaysUpdateLinks": true
 }

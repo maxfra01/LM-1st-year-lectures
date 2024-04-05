@@ -86,3 +86,101 @@ Per valutare le **performance** del demand paging definiamo il **Page fault rati
 $$
 \text{EAT} = (1-p) \cdot \text{memory access} + p\cdot (\text{page fault overhead + swap page out + swap page in})
 $$
+L'operazione è costosa:
+- Possiamo cercare di ridurre la possibilità di page fault
+- Possiamo velocizzare l'operazione di gestione del page fault
+
+### Page fault optimizations
+
+Una prima opzione è avere un disco dedicato ad alte prestazioni per eseguire solamente operazioni di swap. Simile a questa strategia è avere una partizione apposita per fare swap, che dev'essere più veloce del disco.
+
+Altra possibilità: per tutto ciò che deve arrivare ad un eseguibile (tipicamente dati in sola lettura) prendiamo dal disco ma evitiamo di salvare (no page out) e scartiamo le pagine.
+Esistono però parti di programmi che non possono essere scartati (come lo stack o l'heap).
+
+### Copy on write
+
+Nei sistemi UNIX, dopo una fork è creato un processo figlio che condivide lo spazio dati del processo padre. La tecnica di **copy-on-write** permette di creare dati appositi per un processo solamente se il processo stesso li modifica.
+Questo porta alla velocizzazione della creazioni di un processo figlio.
+
+Se durante questa procedura non esistono free frame: **page replacement**, ovvero cerco una pagina che attualmente si trova in memoria, per buttarla fuori e generare un free frame.
+Come scegliere però la pagina da buttare fuori? Se trovo una pagina che non mi serve con dirty bit a 0, significa che posso velocizzare l'operazione perchè non devo salvarla.
+
+Page replacement
+1. Trovare la pagina su disco
+2. Se c'è un frame libero usalo
+3. Se non c'è un free frame usare un algoritmo di determinazione pagine per trovare la pagina vittima (che sarà tolta dalla memoria)
+4. Eventualmente se il dirty bit è a 1 si scrive la vittima su disco
+5. Si porta la pagina desiderata in memoria, si aggiorna la page table e si riprende il programma
+
+### Algoritmi di page replacing
+
+Algoritmi il cui obiettivo è minimizzare la possibilità di page fault.
+Per prima cosa eseguiamo il programma e memorizziamo la sequenza di accessi a pagine da parte del processo: abbiamo quindi una stringa di numeri (numero di pagina), simile alla seguente:
+$$
+7,0,1,2,0,3,0,4,2,3,0,3,0,3,2,1,2,0,1,7,0,1
+$$
+Supponiamo di avere dunque una **stringa di riferimento** $w$ per ogni processo che ho fatto girare: la probabilità empirica di una page fault è la seguente:
+$$
+f(A,m) = \sum_{\forall w}p(w) \frac{F(A,m,w)}{len(w)}
+$$
+Dove $A$ è l'algoritmo di page replacement in esame, $m$ il numero di frame disponibili e $F(A,m,w)$ il numero di page fault generati da una certa stringa $w$, usando un algoritmo $A$ su un sistema con $m$ page frames.
+
+L'algortitmo **ottimo** da usare sarebbe quello che permette di rimuovere le pagine a cui non verrà fatto accesso per più tempo, ma non è ovviamente possibile (non si può predirre il futuro).
+### FIFO Algorithm
+
+![[Pasted image 20240325123346.png]]
+
+Strategia molto semplice; è soggetta però all'anomalia di **Belady**, ovvero aumentando il numero di frame liberi porta a più page fault.
+
+### LRU - Least Recently Used
+
+La strategia base è rimuovere la pagina che non viene usata da più tempo (si guarda il passato della memoria).
+
+![[Pasted image 20240325124150.png]]
+
+La domanda base è come implementare questo algoritmo:
+- **Counter** implementation: ad ogni pagina vado ad associare un tempo di accesso/contatore che devo controllare ogni volta che si verifica un page replacement; inoltre devo aggiornare questo contatore quando faccio l'accesso. Questa tecnica però è molto costosa 
+- Stack implementation: Si tiene traccia di una coda prioritaria basata sugli accessi. In fondo allo stack sarà presente la pagina a cui si è fatto accesso più nel passato, mentre all'inizio c'è la più recente. Per fare questo serve una struttura dati che sia O(1), doppio linkata e vanno sempre aggiornati i puntatori.
+
+Qualunque implementazione si scelga occorre in ogni caso dell'**hardware dedicato** e comunque si presenterebbe un costo elevato. Si cerca allora di produrre algoritmi che siano "quasi" LRU.
+
+# Allocazione dei frame
+
+Ogni processo ha bisogno di un numero **minimo di frame** quanti sono necessari per eseguire un istruzione. Il **numero massimo** corrisponde ai frame totali del sistema.
+Per gestire l'allocazione dei frame abbiamo due alternative: **Fixed** e **Priority** allocation
+
+Nel caso di fixed allocation abbiamo due strategia:
+- Allocazione identica fra processi (100 frame, 5 processi, dunque 20 frame a processo)
+- Allocazione proporzionale: si allocano i frame in modo proporzionale alla grandezza del processo
+
+Quando si fa page replacement dobbiamo definire due politiche:
+- Se un processo necessita di un frame, allora posso scegliere la vittima anche in frame destinati ad altri: questa tecnica è detta **Global replacement**
+- Se un processo può scegliere solo dai frame riservati a lui, allora si parla di **local replacement**. 
+
+Se manteniamo una lista di free frames, possiamo implementare il global replacement andando però a definire una soglia superiore o inferiore, oltre le quali il kernel interrompe la richiesta di frame liberi.
+
+Molti sistema hanno la seguente struttura, Detta **NUMA**:
+
+![[Pasted image 20240325134125.png]]
+
+Allora si fa in modo di avvicinare i frame liberi alla CPU interessata.
+
+# Trashing
+
+Se un processo non ha abbastanza pagine, il page fault ha una probabilità molto alta: se questo accade allora otteniamo troppi context switch, poco utilizzo della CPU e poche reali esecuzione di istruzioni.
+Se numerosi processi sono in esecuzione allora è possibile che si ottengano troppe richieste di paginazione e di conseguenza un degrado delle prestazioni (**trashing**).
+
+![[Pasted image 20240325134523.png]]
+
+### Page fault frequency
+
+Si definisce una **frequenza di page fault** ragionevole (accettabile) e si usa una policy di replacement di tipo locale. Se il rate effettivo di page fault è più alto do un frame in più al processo, se è più basso allora tolgo un frame al processo.
+
+Un possibile algoritmo prevede il seguente funzionamento:
+- Definisco $\tau$ come l'intervallo di tempo dall'ultimo page fault
+- Definisco una certa soglia $C$
+- Se $\tau < C$ si aggiunge un nuovo frame al processo
+- Se $\tau \geq C$ si tolgono dal processo tutte le pagine con reference bit a 0 
+- Dopo metti a 0 il reference bit di tutte le pagine nel processo
+
+![[Pasted image 20240325141241.png]]

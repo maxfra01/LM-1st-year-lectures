@@ -187,4 +187,4 @@ plt.show()
 
 ![[Pasted image 20240314154354.png]]
 
-Next: [[Machine Learning]]
+Next: [[Classification]]

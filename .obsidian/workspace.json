@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "dfde26a5c90eb800",
+        "id": "403cb673dd5e87f2",
         "type": "tabs",
         "children": [
           {
-            "id": "f642458bc65bb509",
+            "id": "7cd1edf9eadd580f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "II semester/Machine learning and pattern recognition/Dimensionality reduction.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "II semester/Machine learning and pattern recognition/Dimensionality reduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "II semester/Machine learning and pattern recognition/Dimensionality reduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "II semester/Machine learning and pattern recognition/Dimensionality reduction.md"
               }
             }
           },
@@ -138,7 +138,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -156,34 +156,40 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f642458bc65bb509",
+  "active": "7cd1edf9eadd580f",
   "lastOpenFiles": [
-    "II semester/Machine learning and pattern recognition/Librerie Python.md",
-    "II semester/Machine learning and pattern recognition/Machine Learning.md",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240316160823.png",
+    "II semester/Machine learning and pattern recognition/Probability and density estimation.md",
+    "II semester/Machine learning and pattern recognition/Dimensionality reduction.md",
+    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240404163321.png",
+    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240404151856.png",
+    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240404150435.png",
+    "II semester/Ingegneria del software/Configuration management.md",
+    "II semester/Web Applications I/Express.md",
+    "II semester/Web Applications I/attachments/Pasted image 20240326105751.png",
+    "II semester/Web Applications I/attachments/Pasted image 20240326105623.png",
+    "II semester/Web Applications I/attachments/Pasted image 20240326105455.png",
+    "II semester/Web Applications I/attachments/Pasted image 20240326104053.png",
+    "II semester/Web Applications I/attachments/Pasted image 20240326103114.png",
+    "II semester/Web Applications I/attachments/Pasted image 20240326103048.png",
+    "II semester/Web Applications I/attachments/Pasted image 20240326101109.png",
     "II semester/Programmazione di sistema/OS Internals/Memoria Virtuale.md",
-    "II semester/Programmazione di sistema/OS Internals/attachments/Pasted image 20240315105825.png",
-    "II semester/Programmazione di sistema/OS Internals/attachments/Pasted image 20240315103904.png",
-    "II semester/Programmazione di sistema/OS Internals/attachments/Pasted image 20240315103443.png",
-    "II semester/Programmazione di sistema/OS Internals/Memoria principale.md",
-    "II semester/Programmazione di sistema/OS Internals/attachments/Pasted image 20240315095019.png",
-    "II semester/Programmazione di sistema/OS Internals/attachments/Pasted image 20240315092555.png",
-    "II semester/Programmazione di sistema/OS Internals/attachments/Pasted image 20240315092018.png",
-    "II semester/Programmazione di sistema/OS Internals/attachments/Pasted image 20240315091621.png",
-    "II semester/Programmazione di sistema/OS Internals/attachments/Pasted image 20240315090034.png",
-    "II semester/Programmazione di sistema/OS Internals/attachments/Pasted image 20240315084129.png",
-    "II semester/Machine learning and pattern recognition/attachments",
-    "II semester/Web Applications I/Javascript.md",
-    "II semester/Ingegneria del software/UML.md",
+    "II semester/Machine learning and pattern recognition/Classification.md",
     "II semester/Ingegneria del software/Requisiti.md",
-    "II semester/Ingegneria del software/Processo software.md",
-    "II semester/Ingegneria del software/Untitled.md",
-    "II semester/Programmazione di sistema/OS Internals/attachments",
+    "II semester/Programmazione di sistema/API Programming/Tipi Composti.md",
+    "II semester/Programmazione di sistema/API Programming/Rust.md",
+    "II semester/Programmazione di sistema/API Programming/Tratti e Tipi generici.md",
     "README.md",
+    "II semester/Web Applications I/Javascript.md",
+    "Untitled.md",
+    "II semester/Ingegneria del software/UML.md",
+    "II semester/Programmazione di sistema/API Programming/Possesso.md",
+    "II semester/Machine learning and pattern recognition/Librerie Python.md",
+    "II semester/Programmazione di sistema/OS Internals/Memoria principale.md",
+    "II semester/Machine learning and pattern recognition/attachments",
+    "II semester/Ingegneria del software/Processo software.md",
+    "II semester/Programmazione di sistema/OS Internals/attachments",
     "II semester/Programmazione di sistema/OS Internals",
     "II semester/Programmazione di sistema/API Programming",
-    "II semester/Programmazione di sistema/API Programming/Rust.md",
-    "II semester/Programmazione di sistema/API Programming/Possesso.md",
     "II semester/Ingegneria del software/attachments",
     "II semester/Programmazione di sistema/API Programming/Allocazione della memoria.md",
     "o.md",
@@ -197,11 +203,6 @@
     "I semester/Tecnologie e servizi di rete/VPN.md",
     "I semester/Tecnologie e servizi di rete/Reti ottiche.md",
     "I semester/Tecnologie e servizi di rete/Network Softwarization.md",
-    "I semester/Tecnologie e servizi di rete/CDN.md",
-    "I semester/Big data processing and analytics/Hadoop/Design patterns.md",
-    "I semester/Tecnologie e servizi di rete/MPLS.md",
-    "I semester/Big data processing and analytics/Spark/RDD-based programming.md",
-    "I semester/Tecnologie e servizi di rete/IPv6.md",
-    "I semester/Big data processing and analytics/Spark/Spark streaming.md"
+    "I semester/Tecnologie e servizi di rete/CDN.md"
   ]
 }

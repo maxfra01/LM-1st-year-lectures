@@ -120,7 +120,7 @@ To print formatted string we can use the dollar sign:
 
 ```js
 const name = "Jeff";
-console.log("Hello ${name}"); //output-> "Hello Jeff"
+console.log(`Hello ${name}`); //output-> "Hello Jeff"
 ```
 
 # Javascript objects
@@ -421,4 +421,156 @@ This means also avoiding classic for loops, we can use functions!
 
 # Asynchronous programming in JS
 
-	
+Javascript is single-threaded, so indirectly is synchronous: asynchronous callbacks can work with an execution environment (such as Node.js).
+The simplest asynchronous call ca be performed with the `setTimeout()` passing as arguments a function and a milliseconds time.
+
+```js
+function hi(){
+	console.log("Hello");
+}
+
+function hi_param(x){
+	console.log("Hello" + x);
+}
+
+console.log("Print delayed");
+
+setTimeout(hi, 1000); //1 second delay
+
+setTimeout(hi, 1000, /*arguments: */ "World");
+```
+
+Since Asynchronous callbacks are very useful, **most of JS program are deeply asynchronous**: programs are **event**-driven and with **non-blocking** primitives.
+
+We can also **delay the execution** of a function with `setInterval()`:
+
+```js
+const id = setInterval( ()=> {/*do something*/}, 2000);
+//EVERY TWO SECONDS THE FUNCTION IS CALLED
+//id is the handle that refers to the timer
+
+//With clearInterval we stop the timer
+clearInterval(id);
+```
+
+### Handling errors in callbacks
+
+There is no correct way to handle errors, only best practices: typically a callback function has the first parameter for storing errors, while the second parameter is for the result.
+This is valid in Node.js:
+
+```js
+fs.readFile('/file.json', (err, data) => {
+	if (err !== null) {
+		console.log(err);
+		return;
+	}
+	//no errors, process data
+	console.log(data);
+});
+```
+
+### Database access with [SQLITE](https://github.com/mapbox/node-sqlite3/wiki)
+
+Node.js supports many databases such as Cassandra, CouchDB, MySQL, MongoDB, Neo4J, Oracle, PostgreSQL, Elastic...
+A simple solution for a small volume of data is **sqlite**.
+
+To establish a connection to a database:
+
+```js
+const sqlite = require('sqlite3');
+
+const db = new sqlite.Database('exams.sqlite', // DB filename
+	(err) => { if (err) throw err; });
+
+//Do stuff
+
+db.close();
+```
+
+To create a query we store the SQL statement into a variable, then we can use sqlite method to run it:
+
+```js
+let sql = "SELECT * FROM course LEFT JOIN score ON course.code=score.coursecode" ;
+
+db.all(sql, (err,rows)=>{
+	if(err) throw err ;
+	for (let row of rows) {
+		console.log(row);
+	}
+});
+```
+
+- `db.all(sql, [params], (err, rows) => { } )`  The `all` function runs the query and (if there are no errors) **all the rows** are stored in the callback `rows` variable.
+
+- `db.get(sql, [params], (err, row) => { } )` The `get` function runs the specified sql query, then it return into the callback `row` variable **only the first row of result**.
+
+- `db.each(sql, [params], (err, row) => { } )` The `each` method runs the callback function once **for each result row** (no need to store them).
+
+- `db.run(sql, [params], function (err) { } )` The `run` method is used for queries that don't return rows at all (such as UPDATE, CREATE TABLE...). 
+
+```ad-warning
+title: SQL Injection
+SQL strings can have parameters: we need to use the `?` placeholder, then specify the parameters inside method's calls.
+Concatenating string is not allowed: it can lead to SQL injection attacks.
+```
+
+SQL queries are executed **asynchronously**: this can lead to errors and bugs. For example queries can be in execution, but JS runs the `db.close()` line.
+Also, it is not guaranteed that the completion order of queries corrisponde to the scheduled order.
+
+### Promises
+
+A **Promise** is an object representing the **eventual completion (or failure)** of an asynchronous operation. They also standardized a way to handle errors and provide a way for errors to propagate correctly through a chain of progress.
+
+The constructor of a promise can call either a **resolve or a reject function**.
+
+```js
+const myPromise =  new Promise((resolve, reject) =>{
+
+	//Do something here
+	//then i call either:
+	resolve(somedata);
+	//or
+	reject("failure");
+})
+```
+
+A promise object has several methods, but the two most important are `then()` and `catch()`.
+When a promise is fulfilled the `then` callback is executed, instead if a promise is rejected then `catch` is executed.
+If we are interested only in the result, we can omit `catch()`.
+
+![[Pasted image 20240319120049.png]]
+
+We can also **concatenate** `then()` methods instead of perform nested callbacks: the only important thing is to return something, otherwise `then` can not operate.
+
+We can execute multiple promises with `all()` and `race()` methods.
+
+### Async / Await
+
+Prepend **async** keyword to any functions means that it will return a promise.
+Prepend **await** when calling an async function (or a function that return a promise) makes the code stops until the promise is resolved.
+
+The async function declaration defines an asynchronous function: asynchronous functions operate in a separate order than the rest of the code (via the event loop), returning an implicit Promise as their result.
+
+he await operator can be used to wait for a Promise. It can only be used inside
+an async function: await blocks the code execution within the async function until the Promise is resolved
+- When resumed, the value of the await expression is that of the fulfilled Promise
+- If the Promise is rejected, the await expression throws the rejected value
+
+```js
+function resolveAfter2Seconds() {
+	return new Promise(resolve => {
+	setTimeout(() => {
+		resolve('resolved');
+	}, 2000);
+	} 
+});
+
+async function asyncCall() {
+	console.log('calling');
+	const result = await resolveAfter2Seconds();
+	console.log(result);
+}
+
+asyncCall()
+```
+

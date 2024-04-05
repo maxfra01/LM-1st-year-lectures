@@ -68,10 +68,38 @@ E' importante definire anche i **requisiti di dominio** (in che ambito è posto 
 # Scenario e Use cases
 
 Uno **scenario** è un esempio di interazione con il software in sviluppo: è composto da una serie di precisi passi (eventi). In questo contesto è necessario considerare il **tempo**.
-Un **use case** è un insieme di scenari comuni che hanno un obiettivo simile in comune:
+Considerando l'esempio del sistema di vendita possiamo immaginare uno scenario come il seguente:
+
+| Step | Descrizione                             |
+| ---- | --------------------------------------- |
+| 1    | Start sales transaction                 |
+| 2    | Read bar code X                         |
+| 3    | Retrieve name and price given barcode X |
+| 4    | Repeat 2 and 3 for all products         |
+| 5    | Compute total T                         |
+| 6    | Manage payment cash amount T            |
+| 7    | Deduce stock amount of product          |
+| 8    | Print receipt                           |
+| 9    | End transaction                         |
+
+Possiamo aggiungere a uno scenario dei **pre e post conditions**: se pensiamo al sistema di vendita possiamo aggiungere come pre-condition il fatto che l'utente sia loggato.
+Dobbiamo inoltre prevedere scenari alternativi (con eventuali errori) come il rifiuto di una carta di credito, oppure un metodo di pagamento particolare.
+
+Un **use case** è un insieme di scenari comuni che hanno un obiettivo simile in comune: nel caso della vendita abbiamo ad esempio la gestione delle vendite:
+- Scenario1: vendita di 2 oggetti
+- Scenario2: vendita di n oggetti con pagamento elettronico
+- Scenario3: vendita di n oggetti con transazione rifiutata o prodotto non valido.
 
 ![[Pasted image 20240309125610.png]]
 
+Il context diagram va a unire i requisiti funzionali descritti nei passi precedenti con gli attori che interagiscono con il sistema, tenendo in considerazione il **tempo**.
+
+### Elementi chiave
+
+Gli elementi chiave che dobbiamo tenere in considerazione sono principalmente:
+- gli **attori** che interagiscono con il sistema
+- **il sistema** (ancora visto come una black box, non serve scendere in dettagli implementativi o grafici)
+- L'**obiettivo** che l'utente vuole raggiungere interagendo con il sistema
 ### Relazioni
 
 Definiamo in genere le relazioni fra un attore e un use case:
@@ -80,10 +108,34 @@ Definiamo in genere le relazioni fra un attore e un use case:
 ![[Pasted image 20240309130149.png]]
 ![[Pasted image 20240309130207.png]]
 
+### Template narrative
+
+| Use Case               | Titolo caso d'uso                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Scope                  | Sistema da progettare (o una parte)                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Level                  | User-goal                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Intention in contact   | Perchè l'utentenusa il sistema e cosa vuole ottenere                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Primary actor          | Utente principale                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Support actor          | Attore di supporto, se presente                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Stakeholders' interest | Interesse specifico di uno SH in questo caso d'uso                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Precondition           | Condizione che deve verificarsi perchè il caso d'uso sia eseguito                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Minimum guarantees     | Condizione che si verifica indipendentemente dal successo o fallimento del caso d'uso                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Success guarantees     | Condizione che si verifica se il caso d'uso termina con successo                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Trigger                | (se presente) è una condizione che scatena l'avvio del caso d'uso da parte dei sistema. Se è l'utente ad avviare autonomamente il sistema, il trigger non esiste                                                                                                                                                                                                                                                                                                                                                  |
+| Main success scenario  | Elenco numerato di interazioni utente-sistema (o sistema-utente nel caso di avvio da trigger) che descrive i passi necessari per raggiungere l'obiettivo. (best case scenario)<br><br>1. L'utente chiede di effettuare una domanda di assunzione<br>2. Il sistema chiede i dati anagrafici<br>3. L'utente inserisce i dati anagrafici<br>4. Il sistema chiede un CV in pdf<br>5. L'utente carica il CV<br>6. Il sistema salva il CV e notifica l'utente del successo<br>7. Il caso d'uso termina con successo<br> |
+| Extensions             | Valutazione di tutte le possibili eccezioni che possono capitare nel main success scenario.<br><br>Ad esempio nel passo 4 il sistema può rilevare errori e si riprende dal punto 3.<br>                                                                                                                                                                                                                                                                                                                           |
+
 ### Design di un sistema
 
-E' necessario considerare tutti gli elementi di un diagramma di contesto. In particolare produrremo un modello UML di una certa entità del sistema.
+Se dobbiamo progettare non solo software, ma anche del sistema hardware, dovrò specificare tutte le componenti del sistema.
+E' necessario considerare tutti gli elementi all'interno del **diagramma di contesto**. In particolare produrremo un modello UML di una certa entità del sistema.
+Per ogni modulo (entità) andrò a definire dei metodi associati **ad alto livello** (non scendo nei dettagli):
 
+![[Pasted image 20240320091629.png]]
+
+Se all'interno del system design c'è una parte computazionale (nell'esempio: il computer) lo si chiama **nodo**. Se invece c'è una parte software lo chiamo **artefatto**.
+
+Infine si definisce il **deployment diagram** che da un'idea della struttura del software nel sistema.
 # Requirement doc: struttura
 
 1 Overall description
