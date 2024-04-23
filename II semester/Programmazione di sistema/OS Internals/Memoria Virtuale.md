@@ -184,3 +184,31 @@ Un possibile algoritmo prevede il seguente funzionamento:
 - Dopo metti a 0 il reference bit di tutte le pagine nel processo
 
 ![[Pasted image 20240325141241.png]]
+
+Riassunto: al posto di assegnare un frame fisso al processo, diano un numero di frame dinamico.
+# Allocazione memoria kernel
+
+Lasciando perdere come si allocano i frame, concentriamoci sulla memoria del kernel.
+Il Kernel necessita di una porzione di memoria utilizzata in modo speciale (nel caso di IO e di Page Table si richiede una porzione di memoria contigua).
+Due alternative:
+- buddy system
+- slab allocator
+
+### Buddy system
+
+Sistema di allocazione **contigua** che cerca di sfruttare comunque i vantaggi della paginazione: si alloca solamente in base alle potenze di 2 (accetto frammentazione interna) arrotondando per eccesso.
+Quando richiedo allocazione di poco spazio, il chunk libero viene diviso in due (potenza di 2 dell'ordine inferiore).
+ES. 256 KB chunk, richiedo allocazione di 21KB, allora otterrò due chunk da 128KB.
+
+![[Pasted image 20240415115632.png]]
+
+### Slab allocator
+
+Sistema di allocazione contiguo che alloca a multiple di pagine: una **slab** è una o più pagine contigue.
+
+![[Pasted image 20240415115643.png]]
+
+# Prepaging
+
+Per diminuire il numero di page fault all'avvio di un processo, si usa una strategia di **preallocazione** di pagine per un data processo (prima di essere avviato).
+Assumiamo che $s$ pagine siano preparate e $a$ il numero di pagine usate effettivamente usate ($a$ è una percentuale).
