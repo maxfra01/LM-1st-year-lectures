@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b88a9eede2e2fd59",
+        "id": "5c5252f08850a6c0",
         "type": "tabs",
         "children": [
           {
-            "id": "b9f05b91a7d043ca",
+            "id": "3d93ff2c54d735e7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "II semester/Programmazione di sistema/API Programming/Gestione degli errori.md",
+                "file": "II semester/Web Applications I/Passport JS.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "II semester/Programmazione di sistema/API Programming/Gestione degli errori.md",
+                "file": "II semester/Web Applications I/Passport JS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "II semester/Programmazione di sistema/API Programming/Gestione degli errori.md",
+                "file": "II semester/Web Applications I/Passport JS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "II semester/Programmazione di sistema/API Programming/Gestione degli errori.md"
+                "file": "II semester/Web Applications I/Passport JS.md"
               }
             }
           },
@@ -156,52 +156,53 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b9f05b91a7d043ca",
+  "active": "3d93ff2c54d735e7",
   "lastOpenFiles": [
+    "II semester/Ingegneria del software/Processi software.md",
+    "II semester/Web Applications I/Passport JS.md",
+    "II semester/Machine learning and pattern recognition/Support Vector Machines.md",
+    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530172233.png",
+    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530172146.png",
+    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530172110.png",
+    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530172038.png",
+    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530171250.png",
+    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530171155.png",
+    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530171138.png",
+    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530170959.png",
+    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530165745.png",
+    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530165506.png",
+    "II semester/Programmazione di sistema/OS Internals/File System.md",
+    "II semester/Programmazione di sistema/OS Internals/Memoria di massa.md",
+    "II semester/Machine learning and pattern recognition/Logistic regression.md",
+    "II semester/Ingegneria del software/Esercizi.md",
+    "II semester/Ingegneria del software/Verification & Validation.md",
+    "II semester/Programmazione di sistema/API Programming/Thread.md",
+    "II semester/Web Applications I/Life-cycle in React.md",
+    "II semester/Web Applications I/Client-Server interaction.md",
     "II semester/Web Applications I/React.md",
-    "II semester/Web Applications I/attachments/Pasted image 20240423102551.png",
-    "II semester/Programmazione di sistema/API Programming/Lifetime.md",
-    "II semester/Ingegneria del software/Project managment.md",
-    "II semester/Programmazione di sistema/API Programming/Gestione degli errori.md",
-    "II semester/Programmazione di sistema/API Programming/Tratti e Tipi generici.md",
-    "II semester/Programmazione di sistema/API Programming/Tipi Composti.md",
-    "II semester/Programmazione di sistema/API Programming/attachments/Pasted image 20240422132019.png",
-    "II semester/Programmazione di sistema/API Programming/attachments/Pasted image 20240422125213.png",
-    "II semester/Ingegneria del software/UI design.md",
-    "II semester/Machine learning and pattern recognition/Gaussian classifiers.md",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240419141836.png",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240419134806.png",
-    "II semester/Machine learning and pattern recognition/Dimensionality reduction.md",
-    "Pca.md",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240419131025.png",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240418151956.png",
-    "II semester/Machine learning and pattern recognition/Probability and density estimation.md",
-    "II semester/Programmazione di sistema/OS Internals/Esercizi.md",
-    "II semester/Programmazione di sistema/OS Internals/attachments/esercizi-risolti-su-memoria-2.pdf",
-    "II semester/Programmazione di sistema/OS Internals/Memoria principale.md",
-    "II semester/Programmazione di sistema/OS Internals/Memoria Virtuale.md",
-    "II semester/Programmazione di sistema/OS Internals/attachments/esercizi-risolti-su-memoria-1.pdf",
-    "II semester/Programmazione di sistema/OS Internals/attachments/Pasted image 20240415115643.png",
-    "II semester/Programmazione di sistema/OS Internals/attachments/Pasted image 20240415115632.png",
-    "II semester/Ingegneria del software/UML.md",
-    "II semester/Web Applications I/JS in browser.md",
-    "II semester/Web Applications I/attachments/Pasted image 20240409122126.png",
-    "II semester/Ingegneria del software/Configuration management.md",
-    "II semester/Web Applications I/Express.md",
-    "II semester/Machine learning and pattern recognition/Classification.md",
-    "II semester/Ingegneria del software/Requisiti.md",
-    "II semester/Programmazione di sistema/API Programming/Rust.md",
-    "README.md",
-    "II semester/Web Applications I/Javascript.md",
+    "II semester/Machine learning and pattern recognition/Bayesian decisions and model evaluation.md",
     "Untitled.md",
-    "II semester/Programmazione di sistema/API Programming/Possesso.md",
+    "II semester/Programmazione di sistema/OS Internals/OS161.md",
+    "II semester/Programmazione di sistema/OS Internals/Memoria Virtuale.md",
+    "II semester/Ingegneria del software/Architetture e design.md",
+    "II semester/Ingegneria del software/UI design.md",
+    "II semester/Ingegneria del software/Processo software.md",
+    "II semester/Ingegneria del software/UML.md",
+    "II semester/Ingegneria del software/Requisiti.md",
+    "II semester/Ingegneria del software/Configuration management.md",
+    "II semester/Programmazione di sistema/API Programming/Smart pointers.md",
+    "II semester/Programmazione di sistema/Smart pointer.md",
+    "II semester/Programmazione di sistema/API Programming/attachments 1",
+    "II semester/Programmazione di sistema/API Programming/File IO.md",
+    "II semester/Machine learning and pattern recognition/Gaussian classifiers.md",
+    "II semester/Programmazione di sistema/OS Internals/attachments/esercizi-risolti-su-memoria-2.pdf",
+    "II semester/Programmazione di sistema/OS Internals/attachments/esercizi-risolti-su-memoria-1.pdf",
     "II semester/Machine learning and pattern recognition/attachments",
     "II semester/Programmazione di sistema/OS Internals/attachments",
     "II semester/Programmazione di sistema/OS Internals",
     "II semester/Programmazione di sistema/API Programming",
     "II semester/Ingegneria del software/attachments",
     "II semester/Web Applications I/attachments",
-    "II semester/Programmazione di sistema/API Programming/attachments",
-    "II semester"
+    "II semester/Programmazione di sistema/API Programming/attachments"
   ]
 }
