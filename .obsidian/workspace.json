@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5c5252f08850a6c0",
+        "id": "166d0ff5e84561b7",
         "type": "tabs",
         "children": [
           {
-            "id": "3d93ff2c54d735e7",
+            "id": "6fa655037bffd161",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "II semester/Web Applications I/Passport JS.md",
+                "file": "II semester/Machine learning and pattern recognition/Support Vector Machines.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "II semester/Web Applications I/Passport JS.md",
+                "file": "II semester/Machine learning and pattern recognition/Support Vector Machines.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "II semester/Web Applications I/Passport JS.md",
+                "file": "II semester/Machine learning and pattern recognition/Support Vector Machines.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "II semester/Web Applications I/Passport JS.md"
+                "file": "II semester/Machine learning and pattern recognition/Support Vector Machines.md"
               }
             }
           },
@@ -156,45 +156,45 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3d93ff2c54d735e7",
+  "active": "6fa655037bffd161",
   "lastOpenFiles": [
+    "II semester/Machine learning and pattern recognition/Gaussian classifiers.md",
+    "II semester/Ingegneria del software/Ripasso esame.md",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240628113853.png",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240628113014.png",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240628111853.png",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240628111246.png",
+    "II semester/Ingegneria del software/Requisiti.md",
+    "II semester/Ingegneria del software/Processo software.md",
+    "II semester/Ingegneria del software/Configuration management.md",
+    "II semester/Ingegneria del software/Verification & Validation.md",
+    "II semester/Ingegneria del software/Architetture e design.md",
+    "II semester/Ingegneria del software/UI design.md",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240627000558.png",
     "II semester/Ingegneria del software/Processi software.md",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240626144145.png",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240626144008.png",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240626143847.png",
+    "II semester/Ingegneria del software/attachments/Pasted image 20240626143630.png",
+    "II semester/Programmazione di sistema/OS Internals/IO.md",
+    "II semester/Programmazione di sistema/OS Internals/OS161.md",
+    "II semester/Programmazione di sistema/OS Internals/attachments/Pasted image 20240618141610.png",
+    "II semester/Programmazione di sistema/OS Internals/File System.md",
+    "II semester/Programmazione di sistema/OS Internals/Esercizi.md",
+    "II semester/Programmazione di sistema/OS Internals/Memoria Virtuale.md",
+    "II semester/Machine learning and pattern recognition/Score calibration.md",
+    "II semester/Programmazione di sistema/OS Internals/Memoria principale.md",
+    "II semester/Programmazione di sistema/OS Internals/Memoria di massa.md",
+    "II semester/Machine learning and pattern recognition/Gaussian Mixture Models.md",
     "II semester/Web Applications I/Passport JS.md",
     "II semester/Machine learning and pattern recognition/Support Vector Machines.md",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530172233.png",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530172146.png",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530172110.png",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530172038.png",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530171250.png",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530171155.png",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530171138.png",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530170959.png",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530165745.png",
-    "II semester/Machine learning and pattern recognition/attachments/Pasted image 20240530165506.png",
-    "II semester/Programmazione di sistema/OS Internals/File System.md",
-    "II semester/Programmazione di sistema/OS Internals/Memoria di massa.md",
     "II semester/Machine learning and pattern recognition/Logistic regression.md",
     "II semester/Ingegneria del software/Esercizi.md",
-    "II semester/Ingegneria del software/Verification & Validation.md",
     "II semester/Programmazione di sistema/API Programming/Thread.md",
     "II semester/Web Applications I/Life-cycle in React.md",
     "II semester/Web Applications I/Client-Server interaction.md",
     "II semester/Web Applications I/React.md",
-    "II semester/Machine learning and pattern recognition/Bayesian decisions and model evaluation.md",
-    "Untitled.md",
-    "II semester/Programmazione di sistema/OS Internals/OS161.md",
-    "II semester/Programmazione di sistema/OS Internals/Memoria Virtuale.md",
-    "II semester/Ingegneria del software/Architetture e design.md",
-    "II semester/Ingegneria del software/UI design.md",
-    "II semester/Ingegneria del software/Processo software.md",
-    "II semester/Ingegneria del software/UML.md",
-    "II semester/Ingegneria del software/Requisiti.md",
-    "II semester/Ingegneria del software/Configuration management.md",
-    "II semester/Programmazione di sistema/API Programming/Smart pointers.md",
-    "II semester/Programmazione di sistema/Smart pointer.md",
     "II semester/Programmazione di sistema/API Programming/attachments 1",
-    "II semester/Programmazione di sistema/API Programming/File IO.md",
-    "II semester/Machine learning and pattern recognition/Gaussian classifiers.md",
     "II semester/Programmazione di sistema/OS Internals/attachments/esercizi-risolti-su-memoria-2.pdf",
     "II semester/Programmazione di sistema/OS Internals/attachments/esercizi-risolti-su-memoria-1.pdf",
     "II semester/Machine learning and pattern recognition/attachments",

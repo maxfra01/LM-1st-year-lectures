@@ -74,6 +74,9 @@ La teoria fondamentale del testing del software è un insieme di principi che de
 
 # Black Box testing
 
+Scriviamo test in base a **criteri** che raggruppano una categoria di possibili input.
+
+
 # White Box Testing
 
 Si basa sulla **copertura** di tutti gli elementi strutturali del codice. Occorre avere conoscenza completa del codice.
@@ -131,6 +134,3 @@ Ci si basa su tutte le condizioni nel codice:
 Per la **Loop**: si considera ogni ciclo (for while) separatamente e si scrivono per ognuno 3 test: uno per quando non si entra nel loop, uno per entrarci una volta, uno per entrarci più volte.
 
 Il Path prevede di visitare ogni possibile percorso nel CFG.
-
-# Integration test
-

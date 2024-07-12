@@ -167,3 +167,70 @@ Questi concetti sono cruciali per la gestione sicura ed efficiente dei file nei 
 
 # Implementazione
 
+Il FS di fatto risiede nei dischi della memoria secondaria: fornisce un'interfaccia per vedere tutti i file, che di fatto corrisponde a una traduzione da logico a fisico.
+Un singolo file è rappresentato logicamente da un **FILE CONTROL BLOCK FCB** che ne descrive tutte le sue caratteristiche.
+I livelli di un File systems sono i seguenti:
+
+![[Pasted image 20240617144727.png]]
+
+In UNIX un FCB è chiamato **inode**:
+
+![[Pasted image 20240617145222.png]]
+
+### Operazioni su File System
+
+Ci sono innanzitutto 2 strutture dati che contengono informazioni su come fare bootstrap: **Boot control block** e **Volume control block**.
+La mount table da informazioni su quali file system sono attivi e dove sono agganciati.
+La **system wide open file table** tiene conto dei file aperti per tutto il sistema, mentre la **per process open file table** è confinato al singolo processo
+
+![[Pasted image 20240617145439.png]]
+
+- Nel caso di una read, l'operazioni è chiamata in user space. Si parte dal nome del file, e si localizza su disco il FCB del relativo file e lo si porta. Dopodichè il FCB viene copiato nella system wide open file table.
+- Se due processi aprono in contemporanea lo stesso file, allora ci sarà una sola copia del FCB nella system wide o.t. mentre nella per process o.t. ognuno avrà la sua istanza.
+
+### Direttori
+
+Due possibili implementazioni:
+- Liste lineari di file O(n)
+- Hash Table (migliori performance)
+
+### Allocazioni di file: contiguo
+
+![[Pasted image 20240617150306.png]]
+
+### Allocazione di file: lista linkata
+
+![[Pasted image 20240617150617.png]]
+
+Dobbiamo supporre che ogni blocco abbia spazio per sia per i dati che per il puntatore al prossimo blocco
+
+Una sua variante è la FAT: dato che in una linked list, se perdo un blocco perdo anche i successivi, per la FAT si è pensato di separare i dati dai puntatori.
+
+![[Pasted image 20240617150941.png]]
+
+### Allocazione dei file: indicizzato
+
+Usiamo delle tabelle ad accesso diretto per accedere ai blocchi file.
+Ogni file è associato a un **blocco indice**:
+
+![[Pasted image 20240617151350.png]]
+
+Nel caso di un file che necessiti di più indici rispetto a quelli che entrano in un blocco indice, allora ho due opzioni:
+- Lista di blocchi indici: pago in complessità e performance
+- Blocco indice a più livelli
+
+
+### UNIX UFS
+
+![[Pasted image 20240617151715.png]]
+
+Il FCB (inode) contiene info e poi:
+- Puntatori a blocchi dati diretti ( in genere 10, se il file è piccolo bastano loro )
+- Un blocco singolo indiretto, uno doppio e uno triplo
+Se il blocco singolo indiretto punta a un **blocco indice da 512** blocchi dato allora per riempire il livello doppio ho 512^2 blocchi dato e nel triplo ho 512^3.
+
+### Gestione dello spazio libero
+
+Tipicamente esiste o una free-list o una bitmap (vettore) parallela ai blocchi (0 occupato, 1 libero)
+- La bitmap richiede spazio aggiuntivo (hanno, se ben gestite, complessità logaritmiche)
+- La free list invece avrà complessità lineare per la ricerca di spazio libero contiguo.

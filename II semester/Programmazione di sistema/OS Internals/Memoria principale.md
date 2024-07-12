@@ -62,7 +62,7 @@ Fare compattazione è un'operazione costosa, perciò si è deciso di passare dal
 Il **Paging** fa uso di allocazione di memoria a dimensione fissa: 
 - Dividiamo la memoria fisica in **frames**
 - Dividiamo la memoria logica in **pagine**
-Pagine e frames hanno la **stessa dimensione**|
+Pagine e frames hanno la **stessa dimensione**
 
 ```ad-warning
 title: Frame vs Page

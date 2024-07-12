@@ -102,7 +102,9 @@ Esistono però parti di programmi che non possono essere scartati (come lo stack
 Nei sistemi UNIX, dopo una fork è creato un processo figlio che condivide lo spazio dati del processo padre. La tecnica di **copy-on-write** permette di creare dati appositi per un processo solamente se il processo stesso li modifica.
 Questo porta alla velocizzazione della creazioni di un processo figlio.
 
-Se durante questa procedura non esistono free frame: **page replacement**, ovvero cerco una pagina che attualmente si trova in memoria, per buttarla fuori e generare un free frame.
+# Page Replacing
+
+Se durante un page fault non esistono free frame: **page replacement**, ovvero cerco una pagina che attualmente si trova in memoria, per buttarla fuori e generare un free frame.
 Come scegliere però la pagina da buttare fuori? Se trovo una pagina che non mi serve con dirty bit a 0, significa che posso velocizzare l'operazione perchè non devo salvarla.
 
 Page replacement
